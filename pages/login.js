@@ -5,10 +5,16 @@ import Form from "../components/form";
 import Footer from "../components/footer";
 
 export default class Home extends Form {
-  state = { data: "", errorMsg: null, successMsg: null };
+  state = { data: "", errorMsg: null, successMsg: null, tokenExpired: null };
+
+  componentDidMount() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const isTokenExpired = urlParams.get("e");
+    if (isTokenExpired) this.setState({ tokenExpired: true });
+  }
 
   async doSubmit() {
-    this.setState({ errorMsg: null, successMsg: null });
+    this.setState({ errorMsg: null, successMsg: null, tokenExpired: null });
     const { phone } = this.state.data;
     try {
       await auth.login(phone && phone.trim());
@@ -21,7 +27,7 @@ export default class Home extends Form {
   }
 
   render() {
-    const { errorMsg, successMsg } = this.state;
+    const { errorMsg, successMsg, tokenExpired } = this.state;
 
     const inputStyles =
       "focus:outline-none text-center outline-none focus:ring mb-2 focus:ring-blue-600 border border-gray-200 px-6 py-3 rounded-md w-full";
@@ -35,7 +41,13 @@ export default class Home extends Form {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main className="flex flex-col items-center w-full h-screen p-4 bg-gray-100">
+          {tokenExpired && (
+            <h2 className="px-3 py-4 my-3 text-center text-gray-700 bg-yellow-500 rounded-lg shadow-inner">
+              Your token expired. Please login again below.
+            </h2>
+          )}
           <Image src="/logo.png" alt="me" width={200} height={200} />
+
           <h1 className="my-3 text-4xl font-extrabold tracking-tight">
             Login to <span className="text-blue-600">Telly</span>
           </h1>

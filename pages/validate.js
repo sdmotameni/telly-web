@@ -18,7 +18,7 @@ export default class validate extends Component {
       .catch(({ _, serversDown }) => {
         if (!serversDown) {
           // if not valid, return link has expired
-          window.location = "/login";
+          window.location = "/login?e=true";
         } else {
           window.location = "/maintenance";
         }
