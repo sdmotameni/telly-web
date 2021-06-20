@@ -55,7 +55,7 @@ export default class Home extends Form {
           >
             {this.renderInput(
               inputStyles,
-              "phone",
+              "tel",
               "phone",
               "Enter your phone number",
               this.handleChange
