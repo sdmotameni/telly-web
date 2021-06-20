@@ -6,8 +6,12 @@ if (typeof window !== "undefined") {
   http.setJwt(getToken());
 }
 
-function login(email, password) {
-  return http.post(apiEndpoint + "login", { email, password });
+function login(phone) {
+  return http.post(apiEndpoint + "login", { phone });
+}
+
+function validateToken(token) {
+  return http.post(apiEndpoint + "validate", { token });
 }
 
 function register(email, password, profileId, name, phone) {
@@ -37,4 +41,5 @@ export default {
   register,
   logout,
   storeToken,
+  validateToken,
 };
