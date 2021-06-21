@@ -6,7 +6,6 @@ import UserService from "../services/userService";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
-
 export default class Links extends Component {
   state = { data: "", profile: "", errorMsg: null };
 
@@ -40,7 +39,7 @@ export default class Links extends Component {
           </div>
           <Footer />
         </main>
-      </=>
+      </>
     );
   }
 }
