@@ -6,12 +6,12 @@ import Footer from "./footer";
 
 export default function Welcome() {
   return (
-    <div className="w-full h-screen p-4 bg-gray-100">
+    <>
       <Head>
         <title>Welcome - Telly</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="h-full space-y-6">
+      <div className="w-full h-screen p-4 space-y-6 bg-gray-100">
         <h1 className="mt-5 text-5xl font-extrabold text-center">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500">
             Hey!
@@ -53,6 +53,6 @@ export default function Welcome() {
         </Link>
         <Footer />
       </div>
-    </div>
+    </>
   );
 }

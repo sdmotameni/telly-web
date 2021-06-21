@@ -44,7 +44,7 @@ export default class Home extends Form {
         </Head>
         <main className="flex flex-col items-center w-full h-screen p-4 bg-gray-100">
           {tokenExpired && (
-            <h2 className="px-3 py-4 my-3 text-center text-gray-700 bg-yellow-500 rounded-lg shadow-inner">
+            <h2 className="px-3 py-4 my-3 text-sm text-center text-gray-500 bg-yellow-500 rounded-lg shadow-inner">
               Your token expired. Please login again below.
             </h2>
           )}

@@ -13,7 +13,7 @@ export default class validate extends Component {
 
     AuthService.validateToken(token)
       .then(({ headers }) => {
-        auth.storeToken(headers["x-auth-token"]);
+        AuthService.storeToken(headers["x-auth-token"]);
         window.location = "/me";
       })
       .catch(({ _, serversDown }) => {
