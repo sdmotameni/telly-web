@@ -1,4 +1,4 @@
-import auth from "../services/auth";
+import auth from "../services/authService";
 import { useRouter } from "next/router";
 
 const Logout = (router) => {
