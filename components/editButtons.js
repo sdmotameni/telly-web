@@ -9,7 +9,7 @@ export default function EditButtons() {
       <Link href="/settings">
         <a className={styles}>Settings</a>
       </Link>
-      <Link href="/new">
+      <Link href="/links">
         <a className={styles}>Edit Links</a>
       </Link>
     </div>
