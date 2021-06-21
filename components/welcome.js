@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-import Header from "./header";
 import Footer from "./footer";
 
 export default function Welcome() {
@@ -12,7 +11,6 @@ export default function Welcome() {
         <title>Welcome - Telly</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <div className="h-full space-y-6">
         <h1 className="mt-5 text-5xl font-extrabold text-center">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500">

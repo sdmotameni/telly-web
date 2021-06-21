@@ -48,7 +48,7 @@ export default class Home extends Form {
               Your token expired. Please login again below.
             </h2>
           )}
-          <Image src="/logo.png" alt="me" width={200} height={200} />
+          <Image src="/logo.png" alt="me" width={150} height={150} />
 
           <h1 className="my-3 text-4xl font-extrabold tracking-tight">
             Login to <span className="text-blue-600">Telly</span>
