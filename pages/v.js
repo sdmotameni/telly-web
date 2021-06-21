@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Loading from "../components/loading";
-import auth from "../services/auth";
+import auth from "../services/authService";
 
 export default class validate extends Component {
   state = { component: <Loading /> };

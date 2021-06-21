@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Footer from "../components/footer";
 import Form from "../components/form";
-import auth from "../services/auth";
+import auth from "../services/authService";
 
 export default class Register extends Form {
   state = { data: "", errorMsg: null };

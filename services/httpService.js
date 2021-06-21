@@ -1,5 +1,5 @@
 import axios from "axios";
-import logger from "./logger";
+import logger from "./loggerService";
 
 axios.interceptors.response.use(null, (error) => {
   const serversDown = !error.response || error.response.status == 503;

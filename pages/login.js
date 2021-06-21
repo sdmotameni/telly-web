@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import auth from "../services/auth";
+import auth from "../services/authService";
 import Form from "../components/form";
 import Footer from "../components/footer";
 

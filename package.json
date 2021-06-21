@@ -14,8 +14,7 @@
     "axios": "0.21.1",
     "next": "10.1.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "vcard-creator": "0.4.1"
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
     "autoprefixer": "10.2.5",
