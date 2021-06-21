@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import getMetaDetails from "../utils/getMetaDetails";
 
 const LinkButton = (platform, handle) => {

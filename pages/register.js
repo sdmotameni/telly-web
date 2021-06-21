@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
+
+import AuthService from "../services/authService";
+
 import Footer from "../components/footer";
 import Form from "../components/form";
-import auth from "../services/authService";
 
 export default class Register extends Form {
   state = { data: "", errorMsg: null };
@@ -23,14 +25,14 @@ export default class Register extends Form {
     const { email, password, name, phone } = this.state.data;
 
     try {
-      const { headers } = await auth.register(
+      const { headers } = await AuthService.register(
         email,
         password,
         profileId,
         name,
         phone && phone.replace(/[^\d]/g, "")
       );
-      auth.storeToken(headers["x-auth-token"]);
+      AuthService.storeToken(headers["x-auth-token"]);
       window.location = "/me";
     } catch ({ errorMsg, _ }) {
       this.setState({ errorMsg });
@@ -46,7 +48,7 @@ export default class Register extends Form {
       "flex items-center w-full justify-center px-4 py-2 mt-3 font-semibold text-white bg-blue-500 rounded-full outline-none";
 
     return (
-      <div>
+      <>
         <Head>
           <title>Register - Telly</title>
           <link rel="icon" href="/favicon.ico" />
@@ -105,7 +107,7 @@ export default class Register extends Form {
           </form>
           <Footer styles="mt-3" />
         </main>
-      </div>
+      </>
     );
   }
 }

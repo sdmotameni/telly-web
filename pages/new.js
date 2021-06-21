@@ -1,10 +1,12 @@
+import config from "../config.json";
 import { Component } from "react";
 import Image from "next/image";
 import Head from "next/head";
+
+import UserService from "../services/userService";
+
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import UserService from "../services/userService";
-import config from "../config.json";
 
 export default class New extends Component {
   state = {

@@ -1,13 +1,14 @@
-import Head from "next/head";
 import { Component } from "react";
-import adminService from "../services/adminService";
+import Head from "next/head";
 
-export default class Panel extends Component {
+import AdminService from "../services/adminService";
+
+export default class Admin extends Component {
   state = { data: "", errorMsg: null };
 
   async componentDidMount() {
     try {
-      const { data } = await adminService.getAllUsers();
+      const { data } = await AdminService.getAllUsers();
       this.setState({ data });
     } catch ({ errorMsg }) {
       this.setState({ errorMsg });

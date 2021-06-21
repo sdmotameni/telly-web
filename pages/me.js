@@ -1,8 +1,10 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+
+import UserService from "../services/userService";
+
 import Profile from "../components/profile";
 import Loading from "../components/loading";
-import UserService from "../services/userService";
 
 export default function Me() {
   const [component, setComponent] = useState(<Loading />);

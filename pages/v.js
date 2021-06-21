@@ -1,6 +1,8 @@
 import { Component } from "react";
+
+import AuthService from "../services/authService";
+
 import Loading from "../components/loading";
-import auth from "../services/authService";
 
 export default class validate extends Component {
   state = { component: <Loading /> };
@@ -9,8 +11,7 @@ export default class validate extends Component {
     const urlParams = new URLSearchParams(window.location.search);
     const token = urlParams.get("t");
 
-    auth
-      .validateToken(token)
+    AuthService.validateToken(token)
       .then(({ headers }) => {
         auth.storeToken(headers["x-auth-token"]);
         window.location = "/me";

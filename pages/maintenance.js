@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
+
 import Footer from "../components/footer";
 
 function Maintenance() {
   return (
-    <div>
+    <>
       <Head>
         <title>Login - Telly</title>
         <link rel="icon" href="/favicon.ico" />
@@ -18,7 +19,7 @@ function Maintenance() {
         <Image src="/maintenance.png" alt="me" width={250} height={250} />
         <Footer styles="mt-3" />
       </main>
-    </div>
+    </>
   );
 }
 

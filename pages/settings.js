@@ -1,8 +1,10 @@
 import Head from "next/head";
+
+import UserService from "../services/userService";
+
 import Form from "../components/form";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import UserService from "../services/userService";
 
 export default class Settings extends Form {
   state = {
@@ -65,7 +67,7 @@ export default class Settings extends Form {
       "flex items-center w-full justify-center px-4 py-2 mt-3 font-semibold text-white bg-green-500 rounded-full outline-none";
 
     return (
-      <div>
+      <>
         <Head>
           <title>Settings- Telly</title>
           <link rel="icon" href="/favicon.ico" />
@@ -173,7 +175,7 @@ export default class Settings extends Form {
           </div>
           <Footer />
         </main>
-      </div>
+      </>
     );
   }
 }

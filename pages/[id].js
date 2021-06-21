@@ -1,10 +1,12 @@
 import { Component } from "react";
+
 import ProfileService from "../services/profileService";
+
 import Loading from "../components/loading";
 import Profile from "../components/profile";
 import Welcome from "../components/welcome";
 
-export default class id extends Component {
+export default class Id extends Component {
   state = { component: <Loading /> };
 
   componentDidMount() {

@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
-import auth from "../services/authService";
+
+import AuthService from "../services/authService";
+
 import Form from "../components/form";
 import Footer from "../components/footer";
 
@@ -17,7 +19,7 @@ export default class Home extends Form {
     this.setState({ errorMsg: null, successMsg: null, tokenExpired: null });
     const { phone } = this.state.data;
     try {
-      await auth.login(phone && phone.trim());
+      await AuthService.login(phone && phone.trim());
       this.setState({
         successMsg: "We sent you a text with your login link.",
       });
@@ -35,7 +37,7 @@ export default class Home extends Form {
       "flex items-center w-full justify-center px-4 py-2 mt-3 font-semibold text-white bg-blue-500 rounded-full outline-none";
 
     return (
-      <div>
+      <>
         <Head>
           <title>Login - Telly</title>
           <link rel="icon" href="/favicon.ico" />
@@ -76,7 +78,7 @@ export default class Home extends Form {
           </form>
           <Footer styles="mt-3" />
         </main>
-      </div>
+      </>
     );
   }
 }

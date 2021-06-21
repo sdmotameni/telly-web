@@ -1,9 +1,9 @@
 import Head from "next/head";
+
 import ProfileHeader from "./profileHeader";
 import LinkButton from "./linkButton";
 import Navbar from "./navbar";
 import EditButtons from "./editButtons";
-// import Footer from "./footer";
 
 function Profile({ data, isAdmin }) {
   const noLinks =

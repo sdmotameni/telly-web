@@ -1,8 +1,11 @@
+import { Component } from "react";
 import Head from "next/head";
+
+import UserService from "../services/userService";
+
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import UserService from "../services/userService";
-import { Component } from "react";
+
 
 export default class Links extends Component {
   state = { data: "", profile: "", errorMsg: null };
@@ -19,7 +22,7 @@ export default class Links extends Component {
   render() {
     const { profile, errorMsg } = this.state;
     return (
-      <div>
+      <>
         <Head>
           <title>Links - Telly</title>
           <link rel="icon" href="/favicon.ico" />
@@ -37,7 +40,7 @@ export default class Links extends Component {
           </div>
           <Footer />
         </main>
-      </div>
+      </=>
     );
   }
 }
