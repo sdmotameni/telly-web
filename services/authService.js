@@ -14,10 +14,8 @@ function validateToken(token) {
   return http.post(apiEndpoint + "validate", { token });
 }
 
-function register(email, password, profileId, name, phone) {
+function register(profileId, name, phone) {
   return http.post(apiEndpoint + "register", {
-    email,
-    password,
     profileId,
     name,
     phone,

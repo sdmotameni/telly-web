@@ -22,12 +22,10 @@ export default class Register extends Form {
     const urlParams = new URLSearchParams(window.location.search);
     const profileId = urlParams.get("profileId");
 
-    const { email, password, name, phone } = this.state.data;
+    const { name, phone } = this.state.data;
 
     try {
       const { headers } = await AuthService.register(
-        email,
-        password,
         profileId,
         name,
         phone && phone.replace(/[^\d]/g, "")
@@ -64,14 +62,6 @@ export default class Register extends Form {
             </h2>
           )}
           <form className="flex flex-col w-full" onSubmit={this.handleSubmit}>
-            <label className="font-semibold">Email</label>
-            {this.renderInput(
-              inputStyles,
-              "text",
-              "email",
-              "john@example.com",
-              this.handleChange
-            )}
             <label className="font-semibold">Phone Number</label>
             {this.renderInput(
               inputStyles,
@@ -86,21 +76,6 @@ export default class Register extends Form {
               "text",
               "name",
               "John Doe",
-              this.handleChange
-            )}
-            <label className="font-semibold">Password</label>
-            {this.renderInput(
-              inputStyles,
-              "password",
-              "password",
-              "Password",
-              this.handleChange
-            )}
-            {this.renderInput(
-              inputStyles,
-              "password",
-              "password2",
-              "Confirm Password",
               this.handleChange
             )}
             {this.renderButton(buttonStyles, "Create Account")}
