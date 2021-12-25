@@ -7,7 +7,7 @@ const LinkButton = (platform, handle) => {
   return (
     <div>
       <a href={url}>
-        <div className="flex px-3 py-1 mt-3 bg-white rounded-md shadow-md shadow-3xl">
+        <div className="flex px-3 py-1 mt-3 bg-white rounded-md shadow-3xl">
           <div className="flex w-full">
             <Image
               src={image}
