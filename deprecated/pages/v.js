@@ -1,8 +1,8 @@
 import { Component } from "react";
 
-import AuthService from "../services/authService";
+import AuthService from "../../services/authService";
 
-import Loading from "../components/loading";
+import Loading from "../../components/loading";
 
 export default class validate extends Component {
   state = { component: <Loading /> };
