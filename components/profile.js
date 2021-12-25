@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import ProfileHeader from "./profileHeader";
 import LinkButton from "./linkButton";
+import Website from "./website";
 
 function Profile({ data }) {
   const noLinks =
@@ -21,6 +22,7 @@ function Profile({ data }) {
             name={data.name}
             bio={data.bio}
           />
+          {data.website && <Website url={data.website} />}
           <div className="mt-4">
             {noLinks && (
               <p className="px-4 py-2 text-xl tracking-tight text-center bg-white rounded-md shadow">
