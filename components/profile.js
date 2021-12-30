@@ -40,6 +40,7 @@ export default function Profile({ data }) {
               })}
           </div>
         </div>
+        <div className="h-16"></div>
       </main>
     </>
   );
