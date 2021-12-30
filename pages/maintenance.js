@@ -1,9 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 
-import Footer from "../components/footer";
-
-function Maintenance() {
+export default function Maintenance() {
   return (
     <>
       <Head>
@@ -17,10 +15,7 @@ function Maintenance() {
           <div className="text-blue-600">Check back later.</div>
         </h1>
         <Image src="/maintenance.png" alt="me" width={250} height={250} />
-        <Footer styles="mt-3" />
       </main>
     </>
   );
 }
-
-export default Maintenance;
