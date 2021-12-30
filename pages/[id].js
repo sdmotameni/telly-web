@@ -10,6 +10,7 @@ export default class Id extends Component {
 
   componentDidMount() {
     const id = window.location.pathname.substring(1);
+
     ProfileService.getProfile(id)
       .then(({ data }) => {
         this.setState({ component: <Profile data={data} /> });

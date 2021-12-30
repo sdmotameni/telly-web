@@ -7,7 +7,7 @@ function Maintenance() {
   return (
     <>
       <Head>
-        <title>Login - Telly</title>
+        <title>Maintenance - Telly</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex flex-col items-center w-full h-screen p-4 bg-gray-100">

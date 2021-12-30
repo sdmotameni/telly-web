@@ -1,10 +1,11 @@
 import Head from "next/head";
 
+import Header from "./header";
 import ProfileHeader from "./profileHeader";
 import LinkButton from "./linkButton";
 import Website from "./website";
 
-function Profile({ data }) {
+export default function Profile({ data }) {
   const noLinks =
     data.links == undefined || Object.keys(data.links).length === 0;
 
@@ -15,6 +16,7 @@ function Profile({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="w-full h-screen bg-gray-100">
+        <Header />
         <div className="p-4 mx-auto">
           <ProfileHeader
             profileId={data.profileId}
@@ -42,5 +44,3 @@ function Profile({ data }) {
     </>
   );
 }
-
-export default Profile;
