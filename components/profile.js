@@ -5,7 +5,7 @@ import ProfileHeader from "./profileHeader";
 import LinkButton from "./linkButton";
 import Website from "./website";
 
-export default function Profile({ data }) {
+export default function Profile({ data, header }) {
   const noLinks =
     data.links == undefined || Object.keys(data.links).length === 0;
 
@@ -16,7 +16,7 @@ export default function Profile({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="w-full h-screen bg-gray-100">
-        <Header />
+        {header && <Header />}
         <div className="p-4 mx-auto">
           <ProfileHeader
             profileId={data.profileId}
@@ -40,8 +40,9 @@ export default function Profile({ data }) {
               })}
           </div>
         </div>
-        <div className="h-16"></div>
       </main>
     </>
   );
 }
+
+// TODO: Add padding to bottom

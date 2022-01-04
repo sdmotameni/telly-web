@@ -11,9 +11,14 @@ export default class Id extends Component {
   componentDidMount() {
     const id = window.location.pathname.substring(1);
 
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
+
     ProfileService.getProfile(id)
       .then(({ data }) => {
-        this.setState({ component: <Profile data={data} /> });
+        this.setState({
+          component: <Profile data={data} header={!params["h"]} />,
+        });
       })
       .catch(({ _, serversDown }) => {
         if (!serversDown) {
