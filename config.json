@@ -26,7 +26,7 @@
   },
   "venmo": {
     "title": "Venmo",
-    "url": "https://venmo.com/",
+    "url": "venmo://paycharge?txn=pay&recipients=",
     "image": "/icons/venmo.png"
   },
   "whatsapp": {
