@@ -14,7 +14,7 @@ export default function ProfileHeader({ profileId, photoUrl, name, bio }) {
             <h1 className="mt-2 text-2xl font-bold tracking-tight text-center">
               {name}
             </h1>
-            <h2 className="font-light tracking-tight text-center text-gray-500">
+            <h2 className="font-light tracking-tight text-center text-gray-500 whitespace-pre-line">
               {bio}
             </h2>
           </div>
