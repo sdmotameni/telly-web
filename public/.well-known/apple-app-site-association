@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "A33H852V7P.com.sepmotameni.telly-app2",
+        "paths": [
+          "/*"
+        ]
+      }
+    ]
+  }
+}
