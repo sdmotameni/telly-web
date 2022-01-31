@@ -38,5 +38,10 @@
     "title": "TikTok",
     "url": "https://www.tiktok.com/@",
     "image": "/icons/tiktok.png"
+  },
+  "email": {
+    "title": "Email",
+    "url": "mailto:",
+    "image": "/icons/email.png"
   }
 }
